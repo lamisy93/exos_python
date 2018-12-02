@@ -1,0 +1,63 @@
+#Lib
+import os
+import random
+from statistics import mean
+
+#Mes notes
+notes = [
+    3, 8, 5,
+    10, 6, 9
+]
+
+result = mean(notes)
+print("Ma moyenne est de {}".format(result))
+
+#Générer une liste
+champs = input("Entrez un pseudo/une adresse email/un mot de passe").split("/")
+print(champs)
+print("Hello {}, ton email est {} et ton mot de passe {}".format(champs[0], champs[1], champs[2]))
+
+#Boucles
+for num in range(1, 8):
+    print("vous avez le numero", num)
+
+#Ma liste
+liste = [
+    "Ami", "Lola", "Pierrot", "Alice", "Rose", "Harley", "Micky"
+]
+
+for nom in liste:
+    print("Votre email a bien été envoyé à", nom)
+
+print(liste)
+print(liste[0])
+liste[0] = "Aminata"
+print(liste[len(liste)-1])
+print(liste)
+liste.insert(3, "Ben")
+print(liste)
+liste[5:6] = ["Mehdi", "Jerem"]
+print(liste)
+liste.append("Aurelie")
+liste.extend(["Carmen", "Paul"])
+print(liste)
+del liste[0]
+print(liste)
+
+#Mon programme
+def programme():
+    res = random.choice(liste)
+    print("Le prénom choisi est :",res)
+
+#Choix possibles
+programme()
+continuer = True
+while continuer:
+    choix = input("Voulez vous continuer ? ")
+    if choix == "oui":
+        programme()
+    else:
+        continuer= False
+        print("Fin du programme")
+        os.system("pause")
+
